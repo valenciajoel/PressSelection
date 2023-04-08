@@ -4,7 +4,6 @@ import android.content.Context;
 import android.graphics.Canvas;
 import android.graphics.Color;
 import android.graphics.Paint;
-import android.support.annotation.NonNull;
 import android.view.View;
 import android.view.animation.Animation;
 import android.view.animation.AnimationUtils;
@@ -13,7 +12,7 @@ public class Circle extends View {
     private Paint paint;
     private Animation animation;
 
-    public Circle(Context context){
+    public Circle(Context context, int randomColor){
         super(context);
         init();
     }
@@ -44,7 +43,10 @@ public class Circle extends View {
         startAnimation(animation);
     }
 
-    public void setExitAnimation(){
+    public void startExitAnimation(){
         animation = AnimationUtils.loadAnimation(getContext(), R.anim.circle_exit_animation);
+    }
+
+    public void startNonWinnerAnimation() {
     }
 }
