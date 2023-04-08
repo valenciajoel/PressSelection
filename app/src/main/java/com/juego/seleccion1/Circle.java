@@ -40,7 +40,7 @@ public class Circle extends View {
         canvas.drawCircle(x,y, radius, paint);
     }
 
-    public void starAnimation(){
+    public void startAnimation(){
         startAnimation(animation);
     }
 
